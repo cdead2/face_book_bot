@@ -7,6 +7,19 @@ except:
     subprocess.check_output('pip install fbchat')
     import fbchat
     from fbchat.models import *
+    
+print("""
+
+
+                        ░█████╗░██╗░░░██╗██╗░░██╗░█████╗░███╗░░░███╗
+                        ██╔══██╗╚██╗░██╔╝██║░░██║██╔══██╗████╗░████║
+                        ███████║░╚████╔╝░███████║███████║██╔████╔██║
+                        ██╔══██║░░╚██╔╝░░██╔══██║██╔══██║██║╚██╔╝██║
+                        ██║░░██║░░░██║░░░██║░░██║██║░░██║██║░╚═╝░██║
+                        ╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝
+
+
+""")
 
 def login():
     user = input('username : ')
@@ -15,13 +28,13 @@ def login():
     if not login.isLoggedIn():
         login = fbchat.Client(user, passs)
 
-    frind_name = input(" اسم الضحيه على الفيسبوك")
-    frind_id = input('اي بي الضحية')
-    msg=input('الرساله >')
+    frind_name = input(" Victom name : ")
+    frind_id = input('Victom ip :')
+    msg=input('message:>')
     search = login.searchForUsers(frind_name)
     frinds = search[0]
     uid = frinds.uid
-    num_of_msg=int(input('عدد الرسأل التي تريد ارسالها? : '))
+    num_of_msg=int(input('How many message do you want to send : '))
     i=0
     while i<num_of_msg:
 
